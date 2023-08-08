@@ -14,16 +14,19 @@ const io = new Server(server,{
 
 const _dirname =path.dirname("")
 const buildpath = path.join(_dirname,"../client/build")
-app.use(express.static(buildpath))
-app.get("/*",function(req,res){
+app.use(express.static(buildPath))
+
+app.get("/*", function(req, res){
+
     res.sendFile(
-        path.join(__dirname,"../client/build/index.html"),
-        function(err){
-            if(err){
-                res.status(500).send(err)
-            }
+        path.join(__dirname, "../client/build/index.html"),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
+          }
         }
-    )
+      );
+
 })
 io.on("connection", (socket)=>{
     console.log("We are connected ")
