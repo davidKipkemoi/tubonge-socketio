@@ -18,7 +18,7 @@ import {
 
 export default function ChatContainer() {
   
-    let socketio  = socketIOClient("http://localhost:6001")
+    let socketio  = socketIOClient("http://localhost:6005")
     const [chats , setChats] = useState([])
     const [user, setUser] = useState(localStorage.getItem("user"))
     const avatar = localStorage.getItem('avatar')
