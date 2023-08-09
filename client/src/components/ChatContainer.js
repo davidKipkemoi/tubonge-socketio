@@ -54,7 +54,7 @@ export default function ChatContainer() {
           unsub()
         }
       
-      },[])
+      },[chatsRef])
 
      function addToFirebase(chat){
         const newChat = {
