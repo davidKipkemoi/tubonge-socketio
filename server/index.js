@@ -12,22 +12,22 @@ const io = new Server(server,{
     }
 }) 
 
-const _dirname =path.dirname("")
-const buildPath = path.join(_dirname,"../client/build")
-app.use(express.static(buildPath))
+// const _dirname =path.dirname("")
+// const buildPath = path.join(_dirname,"../client/build")
+// app.use(express.static(buildPath))
 
-app.get("/*", function(req, res){
+// app.get("/*", function(req, res){
 
-    res.sendFile(
-        path.join(__dirname, "https://main--tourmaline-belekoy-a0a990.netlify.app/"),
-        function (err) {
-          if (err) {
-            res.status(500).send(err);
-          }
-        }
-      );
+//     res.sendFile(
+//         path.join(__dirname, "../client/build/index.html"),
+//         function (err) {
+//           if (err) {
+//             res.status(500).send(err);
+//           }
+//         }
+//       );
 
-})
+// })
 io.on("connection", (socket)=>{
     console.log("We are connected ")
 
