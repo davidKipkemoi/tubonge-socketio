@@ -19,7 +19,7 @@ app.use(express.static(buildPath))
 app.get("/*", function(req, res){
 
     res.sendFile(
-        path.join(__dirname, "../client/build/index.html"),
+        path.join(__dirname, "https://main--tourmaline-belekoy-a0a990.netlify.app/"),
         function (err) {
           if (err) {
             res.status(500).send(err);
