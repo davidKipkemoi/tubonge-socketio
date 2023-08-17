@@ -18,7 +18,8 @@ import {
 
 export default function ChatContainer() {
   
-    let socketio  = socketIOClient("https://chatapp-0im4.onrender.com/")
+  
+    let socketio  = socketIOClient("http://localhost:6009")
     const [chats , setChats] = useState([])
     const [user, setUser] = useState(localStorage.getItem("user"))
     const avatar = localStorage.getItem('avatar')
