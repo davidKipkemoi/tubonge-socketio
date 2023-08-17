@@ -8,7 +8,7 @@ const server = http.createServer(app)
 const cors = require('cors')
 const io = new Server(server,{
     cors:{
-        origin:'*'
+        origin:"*"
     }
 }) 
 
