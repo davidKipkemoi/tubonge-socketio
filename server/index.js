@@ -5,6 +5,7 @@ const PORT = 6009
 const app = express()
 const path = require('path')
 const server = http.createServer(app)
+const cors = require('cors')
 const io = new Server(server,{
     cors:{
         origin:'*'
@@ -14,6 +15,7 @@ const io = new Server(server,{
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname,"../client/build")
 app.use(express.static(buildPath))
+app.use(cors())
 
 app.get("/*", function(req, res){
 
