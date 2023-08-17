@@ -15,7 +15,6 @@ const io = new Server(server,{
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname,"../client/build")
 app.use(express.static(buildPath))
-app.use(cors())
 
 app.get("/*", function(req, res){
 
@@ -40,6 +39,7 @@ io.on("connection", (socket)=>{
         console.log("We are disconnected")
     })
 })
+app.use(cors())
 
 server.listen(PORT,()=>{
     console.log(`David's Sever is listening on port: ${PORT}`)
